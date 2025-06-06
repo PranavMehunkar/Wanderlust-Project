@@ -9,16 +9,8 @@ const listingSchema=new Schema({
   },
   description: String,
   image :{
-        filename: String,
-   url:{
-    type:String,
-    default:
-      "https://pixabay.com/photos/coast-landscape-nature-ocean-sea-1867704/",
-    set: (v) =>
-      v === ""
-        ? "https://pixabay.com/photos/coast-landscape-nature-ocean-sea-1867704/"
-        : v,
-    }
+      url:String,
+      filename:String,
   },
   price: {
     type:Number,
@@ -35,13 +27,30 @@ const listingSchema=new Schema({
   owner: {
     type:Schema.Types.ObjectId,
     ref:"User",
+  },
+  geometry: {
+    type: {
+      type: String,
+      enum: ['Point'],
+      required: true
+    },
+    coordinates: {
+      type: [Number],
+      required: true
+    }
   }
 });
 
-listingSchema.pre("save", function (next) {
+// Add index for geospatial queries
+listingSchema.index({ geometry: '2dsphere' });
+
+// Add a pre-save hook to log geometry data
+listingSchema.pre('save', function(next) {
   if (this.image && this.image.url === "") {
     this.image.url = "https://unsplash.com/photos/a-palm-tree-on-a-beach-with-the-ocean-in-the-background-v0h_ZMZuc9Y";
   }
+  
+  console.log("Pre-save geometry:", this.geometry);
   next();
 });
 
