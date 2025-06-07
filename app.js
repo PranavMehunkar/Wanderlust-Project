@@ -43,7 +43,7 @@ const engine = require("ejs-mate");
 app.engine("ejs", engine);
 
 const store=MongoStore.create({
-    mongoUrl: MONGO_URL,
+    const mongoUrl = process.env.MONGO_URL;
     crypto: {
         secret: process.env.SECRET,
     },
