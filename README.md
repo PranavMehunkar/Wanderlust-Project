@@ -29,7 +29,9 @@ Once logged in, obtain your Cloudinary CLOUD_NAME, CLOUD_API_KEY, and CLOUD_API_
 Add these values to the .env file:
 
 CLOUD_NAME=your_cloud_name
+
 CLOUD_API_KEY=your_api_key
+
 CLOUD_API_SECRET=your_api_secret
 
 4. Set the secret for your Cloudinary storage:
