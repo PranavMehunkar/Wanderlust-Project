@@ -1,4 +1,4 @@
-<h1>Wanderlust Web Project Installation Guide/<h1>
+<h1>Wanderlust Web Project Installation Guide</h1>
 This guide will walk you through the installation process for the Wanderlust web project. Follow the steps below to set up the project locally on your machine.
 
 <h2>Prerequisites</h2>
