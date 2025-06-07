@@ -10,7 +10,7 @@ Nodemon (installed globally)
 <h2>Installation Steps</h2>
 1. Clone the Wanderlust repository from GitHub:
 
-git clone https://github.com/gawandeabhishek/Wanderlust-Major-Project.git
+git clone https://github.com/PranavMehunkar/Wanderlust-Project.git
 
 2. Set up the database:
 
