@@ -21,6 +21,7 @@ const reviewRouter=require("./routes/review.js");
 const userRouter=require("./routes/user.js");
 
 const dbUrl=process.env.ATLASDB_URL;
+const mongoUrl = process.env.MONGO_URL;
 
 main().then(() => {
     console.log("connected to DB");
@@ -43,7 +44,7 @@ const engine = require("ejs-mate");
 app.engine("ejs", engine);
 
 const store=MongoStore.create({
-    const mongoUrl = process.env.MONGO_URL;
+    mongoUrl:MONGO_URL,
     crypto: {
         secret: process.env.SECRET,
     },
