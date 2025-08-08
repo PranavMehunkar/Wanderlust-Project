@@ -10,7 +10,10 @@ Nodemon (installed globally)
 <h2>Installation Steps</h2>
 1. Clone the Wanderlust repository from GitHub:
 
-git clone https://github.com/your-username/Wanderlust-Project.git
+<div class="bg-light p-3 rounded border">
+  <pre class="mb-0">
+    <code>git clone https://github.com/your-username/Wanderlust-Project.git</code></pre>
+</div>
 
 2. Set up the database:
 
@@ -18,7 +21,10 @@ Create a .env file in the root directory of the project.
 
 Add the following line to the .env file:
 
-ATLASDB_URL=mongodb://127.0.0.1:27017/wanderlust
+<div class="bg-light p-3 rounded border">
+  <pre class="mb-0">
+    <code>ATLASDB_URL=mongodb://127.0.0.1:27017/wanderlust</code></pre>
+</div>
 
 3. Set up Cloudinary:
 
@@ -28,25 +34,43 @@ Once logged in, obtain your Cloudinary CLOUD_NAME, CLOUD_API_KEY, and CLOUD_API_
 
 Add these values to the .env file:
 
-CLOUD_NAME=your_cloud_name
+<div class="bg-light p-3 rounded border">
+  <pre class="mb-0">
+    <code>CLOUD_NAME=your_cloud_name</code></pre>
+</div>
 
-CLOUD_API_KEY=your_api_key
+<div class="bg-light p-3 rounded border">
+  <pre class="mb-0">
+    <code>CLOUD_API_KEY=your_api_key</code></pre>
+</div>
 
-CLOUD_API_SECRET=your_api_secret
+<div class="bg-light p-3 rounded border">
+  <pre class="mb-0">
+    <code>CLOUD_API_SECRET=your_api_secret</code></pre>
+</div>
 
 4. Set the secret for your Cloudinary storage:
 
 Add a SECRET key to your .env file and set it to a secure value:
 
-SECRET=your_cloudinary_secret
+<div class="bg-light p-3 rounded border">
+  <pre class="mb-0">
+    <code>SECRET=your_cloudinary_secret</code></pre>
+</div>
 
 5. Install project dependencies using npm:
 
-npm install
+<div class="bg-light p-3 rounded border">
+  <pre class="mb-0">
+    <code>npm install</code></pre>
+</div>
 
 6. Run the application using Nodemon:
 
-nodemon app.js
+<div class="bg-light p-3 rounded border">
+  <pre class="mb-0">
+    <code>nodemon app.js</code></pre>
+</div>
 
 7. Access the project:
 
